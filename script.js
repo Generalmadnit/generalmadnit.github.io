@@ -33,7 +33,7 @@ function emptyElement(element){
 async function get_departments(){
 
 
-   const response =  await fetch('http://kitsbrigade.herokuapp.com/api/departments/')
+   const response =  await fetch('https://kitsbrigade.herokuapp.com/api/departments/')
    const data = await response.json();
    console.log(data)
     change_notes_title("Departments")
@@ -71,7 +71,7 @@ async function get_subjects(event){
     addClassToElement(main_area,'loader')
 
 
-    const response =  await fetch('http://kitsbrigade.herokuapp.com/api/departments/'.concat(event.target.innerHTML))
+    const response =  await fetch('https://kitsbrigade.herokuapp.com/api/departments/'.concat(event.target.innerHTML))
     const data = await response.json();
     console.log(data)
     removeClassToElement(main_area,'loader')
@@ -93,7 +93,7 @@ async function get_subjects(event){
     addClassToElement(main_area,'loader')
 
 
-    const response =  await fetch('http://kitsbrigade.herokuapp.com/api/courses/'.concat(event.target.innerHTML))
+    const response =  await fetch('https://kitsbrigade.herokuapp.com/api/courses/'.concat(event.target.innerHTML))
     const data = await response.json();
     console.log(data)
     removeClassToElement(main_area,'loader')
