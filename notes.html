@@ -1,28 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+         <!-- Global site tag (gtag.js) - Google Analytics -->
+         <script async src="https://www.googletagmanager.com/gtag/js?id=G-4V4CGRL9WL"></script>
+         <script>
+             window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+ 
+                gtag('config', 'G-4V4CGRL9WL');
+             </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&family=Permanent+Marker&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>notes</title>
     <link rel="stylesheet" href="style.css">
+    <!--
+    <script src="pdf.js"> </script>
+            -->
     <script src="script.js">         </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  
 </head>
 <body>
-    
-    <h1>NOTES</h1>
-    <button><a href="index.html">back</a></button>
-    <h3 id="note_title">Departments</h3>
-    
+
+ 
+
+ 
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">BRIGADE</label>
+    <ul>
+      <li><a  href="./index.html">Home</a></li>
+      <li><a href="https://kitsbrigade.herokuapp.com/admin/">login</a></li>
+      <li><a href="./architecture.html">architecture</a></li>
+      
+      <li><a href="./About.html">About</a></li>
     
 
-
-
-    <div id="main_area" class="loader" >
-        
+    </ul>
+  </nav>
+  <main class="away-from-navbar">
+    <h1 class="text-center"> NOTES</h1>
+    <a class="remove_anchor_hover" href="index.html">
+        <img src="./assest/backarrow.svg">
+    </a>
+  
+    <h3 id="note_title" class="move-away-fromscreen Link_button">Departments</h3>
+    <div id="main_area" class="loader" > 
 
     </div>
-
+    <!--<iframe src="" id="pdf_viewer"  style="border-width: 0px;" width="99%" height="90%;" allow="autoplay"> </iframe>  -->
+    </main>
+    <!-- <script src="pdf.js"></script>-->
 </body>
-</html> 
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+
+           <!-- Global site tag (gtag.js) - Google Analytics -->
+           <script async src="https://www.googletagmanager.com/gtag/js?id=G-4V4CGRL9WL"></script>
+           <script>
+               window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+   
+                  gtag('config', 'G-4V4CGRL9WL');
+               </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>BRIGADE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">BRIGADE</label>
+      <ul>
+        <li><a  href="./index.html">Home</a></li>
+        <li><a href="https://kitsbrigade.herokuapp.com/admin/">login</a></li>
+        <li><a class="active" href="./architecture.html">architecture</a></li>
+        
+        <li><a href="./About.html">About</a></li>
+      
+      </ul>
+    </nav>
+
+    <main class="away-from-navbar">
+    <h1 class="text-center text-bigger ">Architecture</h1>
+
+
+      <div>
+        <object class="move-away-fromscreen" data="./assest/architecture.svg" height="300vh" width="95%" ></object>
+      </div>
+
+      <div class="move-away-fromscreen text-content">
+        <h3> Backend</h3>
+        <p >
+          
+          we built backend using  <a href="https://www.djangoproject.com/"> django</a>  ( open source  python web framework ) . 
+          Django have <a href="https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping"> ORM</a>  by using django orm we can create  relation (tables) without writing raw
+          SQL . By the way python comes with  <a href="https://en.wikipedia.org/wiki/SQLite">sqlite</a> . So, we don't   need install heavy database management system . 
+          SQLite is lightweight , We are planing to change  to PostgreSQL  as traffic gets high . 
+          we created three tables (departments,courses,units) using django orm (django orm write sql for us).
+        </p>
+        <p>
+          
+          we built api using <a href="https://www.django-rest-framework.org/"> Django REST framework </a> in around 25 lines of code . 
+          we used django admin panel for entering data in db . API have just three endpoints for departments, subjects , units . API returns
+          data in json format . 
+
+        </p>
+     
+      </div>
+      <div class="move-away-fromscreen   text-content" >
+        <h3 >Frontend </h3>
+
+        <p>
+          we firstly design site in   <a href="https://en.wikipedia.org/wiki/Adobe_XD">Adobe xd</a> . we just write html , css , javaScript .
+
+          In javaScript      we mainly created three functions . These functions call api (currently hosted in Heroku )  for json data and add these to 
+          
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"> DOM </a>.
+          while building these site 
+          we copy pasted almost  from <a href="https://www.w3schools.com/"> w3schools</a>  , <a href="https://developer.mozilla.org/"> MDN </a> , django docs , 
+          djangorestframework docs ,of course from  <a href="https://stackoverflow.com/">Stackoverflow </a>  . Only from Youtube we  learnt
+          everything for building these site . 
+
+        </p>
+      </div>
+    <div class="move-away-fromscreen text-content ">
+      <h3>Deployment</h3>
+
+      <p>
+        As we don't have budget we select only free options . For hosting Frontend we select Github Pages  (because we already did once for  csd note site  )
+        here csd note site means  a site we buit previously for  notes of data science branch . Our friends  gave thier pdfs and book .
+         we hosted them in github . 
+
+        Github pages is free . So we hosted  fronted there 
+
+      </p>
+
+      <p>
+
+        We selected   <a href="https://www.heroku.com/"> Heroku  </a>  because it have  a free plan . we basically followed a youtube tutorial for deploying .
+        Heroku is beginner friendly . Heroku can  detect python . it helped us very much .
+      </p>
+
+      <div>
+        <p>
+          If you like to contribute to these DM <a href="https://www.instagram.com/ram_csd/">nitin </a> in instagram  . If you like give pdf or book we really appreciate that . Thank you reading . 
+        </p>
+    </div>
+    
+
+  </main>
+  </body>
+</html>
+
+
