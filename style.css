@@ -80,9 +80,10 @@ a.active,a:hover{
 
 #main_area {
 
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
+
+
+display: grid;
+grid-template-columns: auto auto ;
 }
 
 #main_area div {
@@ -173,7 +174,7 @@ flex-direction: row;
   .checkbtn{
     display: block;
   }
-  ul{
+ nav  ul{
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -182,12 +183,10 @@ flex-direction: row;
     left: -100%;
     text-align: center;
     transition: all .5s;
-    z-index: 1;
+    z-index: -1;
   }
 
-  #main_area {
-    flex-direction: column;
-  }
+
   nav ul li{
     display: block;
     margin: 50px 0;

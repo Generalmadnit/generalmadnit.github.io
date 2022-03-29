@@ -37,7 +37,7 @@ async function get_departments(){
    const data = await response.json();
    console.log(data)
     change_notes_title("Departments")
-
+  
     let main_area = document.querySelector('#main_area')
     removeClassToElement(main_area,'loader')
 
@@ -70,7 +70,7 @@ async function get_subjects(event){
     emptyElement(main_area)
     addClassToElement(main_area,'loader')
 
-
+  document.title  = event.target.innerHTML
     const response =  await fetch('https://kitsbrigade.herokuapp.com/api/departments/'.concat(event.target.innerHTML))
     const data = await response.json();
     console.log(data)
@@ -91,8 +91,8 @@ async function get_subjects(event){
     let main_area = document.querySelector('#main_area')
     emptyElement(main_area)
     addClassToElement(main_area,'loader')
-
-
+  
+    document.title  = event.target.innerHTML
     const response =  await fetch('https://kitsbrigade.herokuapp.com/api/courses/'.concat(event.target.innerHTML))
     const data = await response.json();
     console.log(data)
