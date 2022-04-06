@@ -79,9 +79,6 @@ a.active,a:hover{
 
 
 #main_area {
-
-
-
 display: grid;
 grid-template-columns: auto auto ;
 }
