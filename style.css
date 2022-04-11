@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
   text-decoration: none;
@@ -38,7 +38,7 @@ nav ul li a{
   border-radius: 3px;
   text-transform: uppercase;
 }
-a.active,a:hover{
+  nav ul li a.active,a:hover{
   background: #1b9bff;
   transition: .5s;
 }
@@ -89,7 +89,7 @@ border-radius: 5px;
 padding: 1rem;
 margin: 1rem;
 text-align: center;
-
+text-transform: uppercase;
 cursor:pointer;
 }
 
@@ -171,6 +171,11 @@ flex-direction: row;
   .checkbtn{
     display: block;
   }
+  #main_area {
+    display: flex;
+    flex-direction: column;
+    
+    }
  nav  ul{
     position: fixed;
     width: 100%;
@@ -192,7 +197,7 @@ flex-direction: row;
   nav ul li a{
     font-size: 20px;
   }
-  a:hover,a.active{
+ nav  a:hover,a.active{
     background: none;
     color: #0082e6;
   }
@@ -215,4 +220,15 @@ flex-direction: row;
 
 }
 
+#nav-in-notes a ,span:nth-child(odd) {
+  
+  text-transform: uppercase;
+  color: blue;
+  cursor:pointer;
+}
+
+
+#notes_nav_area span:hover{
+  background-color: white;
+}
 

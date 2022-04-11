@@ -1,9 +1,36 @@
+
 function change_notes_title(new_title){
 
     // change note title  (title in note page)
 
     let title = document.querySelector("#note_title")
     title.innerHTML = new_title
+
+
+}
+
+
+function add_notes_nav( name,action){
+
+  let notes_nav          =   document.querySelector('#nav-in-notes');
+
+  // here 5 is department + >> + course + >> 
+  if  (notes_nav.childElementCount >= 5 ){
+    notes_nav.removeChild(notes_nav.lastChild)
+    notes_nav.removeChild(notes_nav.lastChild)
+    notes_nav.removeChild(notes_nav.lastChild)
+    notes_nav.removeChild(notes_nav.lastChild)
+  }
+
+  let new_nav           =   document.createElement('span');
+  new_nav.innerHTML     =   name
+  new_nav.setAttribute('onclick', action)
+  
+
+  let greaterthan           = document.createElement("span");
+  greaterthan.innerHTML  = ">>"
+  notes_nav.appendChild(greaterthan)
+  notes_nav.appendChild(new_nav);
 
 
 }
@@ -37,7 +64,7 @@ async function get_departments(){
    const data = await response.json();
    console.log(data)
     change_notes_title("Departments")
-  
+
     let main_area = document.querySelector('#main_area')
     removeClassToElement(main_area,'loader')
 
@@ -60,6 +87,11 @@ async function get_departments(){
 
 window.addEventListener('DOMContentLoaded', (event) => {
     get_departments()
+    var script = document.createElement('script');
+ 
+    script.src = "https://www.google-analytics.com/analytics.js"
+
+  document.head.appendChild(script);
     
     
 });
@@ -70,47 +102,53 @@ async function get_subjects(event){
     emptyElement(main_area)
     addClassToElement(main_area,'loader')
 
-  document.title  = event.target.innerHTML
+    document.title  = event.target.innerHTML
     const response =  await fetch('https://kitsbrigade.herokuapp.com/api/departments/'.concat(event.target.innerHTML))
     const data = await response.json();
+    add_notes_nav(event.target.innerHTML,'get_subjects(event)')
     console.log(data)
     removeClassToElement(main_area,'loader')
     change_notes_title("Subjects")
- 
-     for (let i = 0; i < data.length; i++) {
-         let new_div =  document.createElement("div");
-         new_div.innerHTML = data[i]['name']
-         new_div.setAttribute('onclick','get_units(event)')
-         main_area.appendChild(new_div)
-       }
- 
- }
-
-
- async function get_units(event){
-    let main_area = document.querySelector('#main_area')
-    emptyElement(main_area)
-    addClassToElement(main_area,'loader')
+    ga('send', 'pageview', document.title);
+      for (let i = 0; i < data.length; i++) {
+          let new_div =  document.createElement("div");
+          new_div.innerHTML = data[i]['name']
+          new_div.setAttribute('onclick','get_units(event)')
+          main_area.appendChild(new_div)
+        }
   
-    document.title  = event.target.innerHTML
-    const response =  await fetch('https://kitsbrigade.herokuapp.com/api/courses/'.concat(event.target.innerHTML))
-    const data = await response.json();
-    console.log(data)
-    removeClassToElement(main_area,'loader')
-    change_notes_title("units")
- 
-     for (let i = 0; i < data.length; i++) {
-         let new_div =  document.createElement("div");
-         let file_link = document.createElement('a')
-         file_link.href =  data[i]['file_url']
-         file_link.innerHTML = data[i]['name']
-         file_link.setAttribute('download',data[i]['name'])
-         new_div.appendChild(file_link)
-         
-         main_area.appendChild(new_div)
-       }
- 
  }
+
+
+  async function get_units(event){
+      let main_area = document.querySelector('#main_area')
+      emptyElement(main_area)
+      addClassToElement(main_area,'loader')
+    
+      document.title  = event.target.innerHTML
+      const response =  await fetch('https://kitsbrigade.herokuapp.com/api/courses/'.concat(event.target.innerHTML))
+      const data = await response.json();
+      console.log(data)
+
+      // empty string is passed to  below function . Because last (subject nav should not call again)
+
+      add_notes_nav(event.target.innerHTML,'')
+      removeClassToElement(main_area,'loader')
+      change_notes_title("units")
+      ga('send', 'pageview', document.title);
+  
+      for (let i = 0; i < data.length; i++) {
+          let new_div =  document.createElement("div");
+          let file_link = document.createElement('a')
+          file_link.href =  data[i]['file_url']
+          file_link.innerHTML = data[i]['name']
+          file_link.setAttribute('download',data[i]['name'])
+          new_div.appendChild(file_link)
+          
+          main_area.appendChild(new_div)
+        }
+  
+  }
 
 
 
