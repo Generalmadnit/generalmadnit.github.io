@@ -15,7 +15,7 @@ function add_notes_nav( name,action){
   let notes_nav          =   document.querySelector('#nav-in-notes');
 
   // here 5 is department + >> + course + >> 
-  if  (notes_nav.childElementCount >= 5 ){
+  if  (notes_nav.childElementCount >= 3  ){
     notes_nav.removeChild(notes_nav.lastChild)
     notes_nav.removeChild(notes_nav.lastChild)
     notes_nav.removeChild(notes_nav.lastChild)
