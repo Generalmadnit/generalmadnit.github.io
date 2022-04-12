@@ -106,7 +106,7 @@ async function get_subjects(event){
     document.title  = event.target.innerHTML
     const response =  await fetch('https://kitsbrigade.herokuapp.com/api/departments/'.concat(event.target.innerHTML))
     const data = await response.json();
-    
+    ga('send', 'pageview');
     console.log(data)
     removeClassToElement(main_area,'loader')
     add_notes_nav(event.target.innerHTML,'get_subjects(event)')
@@ -132,7 +132,7 @@ async function get_subjects(event){
       const response =  await fetch('https://kitsbrigade.herokuapp.com/api/courses/'.concat(event.target.innerHTML))
       const data = await response.json();
       console.log(data)
-
+      ga('send', 'pageview');
       // empty string is passed to  below function . Because last (subject nav should not call again)
 
       
