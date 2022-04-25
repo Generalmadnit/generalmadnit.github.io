@@ -144,7 +144,8 @@ async function get_subjects(event){
       for (let i = 0; i < data.length; i++) {
           let new_div =  document.createElement("div");
           let file_link = document.createElement('a')
-          file_link.href =  data[i]['file_url']
+         
+          new_div.setAttribute('onclick',"location.href=".concat("'").concat(data[i]['file_url']).concat("'"))
           file_link.innerHTML = data[i]['name']
           file_link.setAttribute('download',data[i]['name'])
           new_div.appendChild(file_link)
