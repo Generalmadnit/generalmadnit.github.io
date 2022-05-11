@@ -68,16 +68,13 @@ nav ul li a{
 .loader {
   display: inline-block;
   position: relative;
-  width: 80px;
-  height: 80px;
+
 }
 .loader:after {
   content: " ";
   display: block;
   border-radius: 50%;
-  width: 0;
-  height: 0;
-  margin: 8px;
+
   box-sizing: border-box;
   border: 5rem solid #d9cf1f;
   border-color: #d9cf1f transparent #d9cf1f transparent;
