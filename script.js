@@ -72,8 +72,7 @@ async function get_departments(){
     for (let i = 0; i < data.length; i++) {
        
         let new_div =  document.createElement("div");
-       
-        
+
         new_div.innerHTML = data[i]['name']
         new_div.setAttribute('onclick','get_subjects(event)')
         
@@ -119,6 +118,9 @@ async function get_subjects(event){
     ga('send', 'pageview', document.title);
       for (let i = 0; i < data.length; i++) {
           let new_div =  document.createElement("div");
+                 
+
+
           new_div.innerHTML = data[i]['name']
           new_div.setAttribute('onclick','get_units(event)')
           main_area.appendChild(new_div)
@@ -147,7 +149,10 @@ async function get_subjects(event){
       ga('send', 'pageview', document.title);
   
       for (let i = 0; i < data.length; i++) {
-          let new_div =  document.createElement("div");
+          let new_div =  document.createElement("div")
+                 
+
+
           let file_link = document.createElement('a')
          
           new_div.setAttribute('onclick',"location.href=".concat("'").concat(data[i]['file_url']).concat("'"))
