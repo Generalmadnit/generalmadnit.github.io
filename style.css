@@ -328,3 +328,11 @@ width: 80%;
 .backarrow a:hover {
   background-color: black;
 }
+
+.download_app {
+ border:  2px  solid white;
+ padding: 1rem;
+ margin: 1rem;
+ border-radius: 5px;
+ text-transform: uppercase;
+}
