@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4V4CGRL9WL"></script>
+     <script>
+         window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-4V4CGRL9WL');
+         </script>
+
+
+      <!-- For adsense  -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1054429944630337" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>api docs</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">BRIGADE</label>
+        <ul>
+          <li><a  href="./index.html">Home</a></li>
+          <li><a href="https://kitsbrigade.herokuapp.com/admin/" target="_blank">login</a></li>
+          <li><a href="./architecture.html">architecture</a></li>
+          
+          <li><a href="./api.html">API DOCS </a></li>
+        
+    
+        </ul>
+      </nav>
+    <main class="away-from-navbar">
+     <div>
+        <p>
+            <h1 class="text-center">
+                API DOCUMENTATION
+            </h1>
+            <div>
+                We created an api for bridage .
+                 If you want to create your own site or mobile app you can use our api. 
+                 
+                 This api return data in json format . 
+            </div>
+            <p>
+                It have 3 endpoints
+
+                <ol>
+                    <li>
+                        <h3>for list of departments </h3>
+
+                        <p>this endpoint return list of departments in json data</p>
+                        <div class="link-area">
+                          
+                       > GET method https://kitsbrigade.herokuapp.com/api/departments/
+
+                        <br>
+                        <pre>
+
+
+                            [
+                            {
+                            "name": "Master of Business Administration"
+                            },
+                            {
+                            "name": "Computer Science"
+                            }
+                            ]
+                        </pre>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h3>for list of subjects in specific department</h3>
+                        <p>We have to specify which department we want </p>
+                        <div class="link-area">
+                            > GET  https://kitsbrigade.herokuapp.com/api/departments/Computer Science/
+                        <br>
+                        <pre>
+
+
+                            
+                             [
+                            {
+                            "name": "Probability and Statistics"
+                            },
+                            {
+                            "name": "OBJECT ORIENTED PROGRAMMING WITH JAVA LAB"
+                            },
+                            {
+                            "name": "OBJECT ORIENTED PROGRAMMING THROUGH JAVA"
+                            },
+                            {
+                            "name": "MATHEMATICAL FOUNDATIONS OF COMPUTER SCIENCE"
+                            },
+                            {
+                            "name": "NUMERICAL METHODS and TRANSFORMATIONS"
+                            },
+                            {
+                            "name": "Fundamentals of Data science Lab"
+                            },
+                            ...... 
+                        }
+                            ]
+                        </pre>
+   
+                    </div>
+                    </li>
+                    <li>
+                        <h3>for list of units in specific subject</h3>
+
+                        <p>We have to specify which subject we want</p>
+                        <div class="link-area">
+                            > GET https://kitsbrigade.herokuapp.com/api/courses/Fundamentals of Data science Lab/
+
+
+                        <pre>
+
+
+
+                            [
+                                {
+                                "file_url": "https://drive.google.com/file/d/10spkJZOiBEt7A9tAF3zz5wKsGSQsCPaw",
+                                "name": "Unit 3"
+                                },
+                                {
+                                "file_url": "https://drive.google.com/file/d/1omOyos8edEqyPe3C6BJfV622LufFf7RP",
+                                "name": "Syllabus"
+                                },
+                                {
+                                "file_url": "https://drive.google.com/file/d/1omOyos8edEqyPe3C6BJfV622LufFf7RP",
+                                "name": "Unit 1" 
+                                        ........
+                                }
+                                ]
+                        </pre>
+                        </div>
+                    </li>
+                </ol>
+            </p>
+        </p>
+     </div>
+    </main>
+</body>
+</html>
