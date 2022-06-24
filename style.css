@@ -343,5 +343,5 @@ width: 80%;
   border-radius: 5px;
   background-color: #080808;
   margin: 1rem;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
