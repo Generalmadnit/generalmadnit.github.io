@@ -28,51 +28,119 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&family=Permanent+Marker&display=swap" rel="stylesheet">
     <title>BRIGADE</title>
+    <link rel="icon" type="image/x-icon" href="./CSD_NOTES.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   </head>
   <body>
-    <div id="preloader"></div>
-
-  
     <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
-      <label class="logo">BRIGADE</label>
+      <a href="https://kitsspark.github.io/index.html"><img id="logo" src="https://kitsspark.github.io/images/SPARK_LOGO (7).svg" alt="logo"></a>
+      <a href="./index.html"><img id="logo" src="./CSD_NOTES.png" alt="logo"></a>  
       <ul>
-        <li><a class="active" href="./index.html">Home</a></li>
-        <li><a href="https://kitsbrigade.herokuapp.com/admin/" target="_blank">login</a></li>
-        <li><a href="./architecture.html">architecture</a></li>
-        
-        <li><a href="./api.html">API DOCS</a></li>
-      
+        <li><a  href="https://kitsspark.github.io/index.html"target="_blank">Spark Home</a></li>
+        <li><a href="https://kitsspark.github.io/about.html" target="_blank">About</a></li>
+        <li><a href="https://kitsspark.github.io/gallery.html" target="_blank">Gallery</a></li>
+        <li><a href="https://kitsspark.github.io/members.html" target="_blank">Members</a></li>
+        <li><a href="https://kitsspark.github.io/contact.html" target="_blank">Contact</a></li>
+        <li><a href="https://generalmadnit.github.io/" target="_blank">Notes Home</a></li>
+        <li><a href="https://kitsspark.github.io/events.html" target="_blank">Events</a></li>
+        <li><a href="https://kitsspark.github.io/notice_board.html" target="_blank">Notice Board</a></li>
       </ul>
     </nav>
-
-    <main class="main away-from-navbar"  >
     
+    
+    <main class="main away-from-navbar">
 
-
+      <div class="away-from-navbar">
+        <p> &ensp; &ensp; &ensp; &ensp;  We build this portal to solve a common problem,
+        "WRITING NOTES", it is not always possible to attend the classes and to note down the notes,
+        so with the help of this portal,
+        you have upload your finished notes by having the credentials given to you by the devs. Hoping that you will find this portal a useful one. 
+      </p>
+      </div>
+      
       <div class="quote move-away-fromscreen" >
-    
         <div  class="quote-text">
-          <p>For kits students. </P>
-            <P style="margin-left: 5%;">-By kits students</p> 
-                </div>
-                  <div class="btnMain  move-away-fromscreen" >
-                    <button class="btn3d">
-                      <a href="./notes.html" style="color: blue;"> NOTES</a>
-                    </button>
-                  </div>
-                
-           
+          <p>For KITS students. </P>
+          <P style="margin-left: 5%;">-By KITS CSD students</p> 
+        </div>
+        <div class="btnMain  move-away-fromscreen" >
+          <button class="quote-btn3d">
+            <a href="./notes.html" class="btn-flip" data-back="Back" data-front="Front"> <span>Notes</span></a>
+          </button>
+        </div>
       </div>
     </main>
 
   </body>
+
+  
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer class="footer">
+  <div class="footer__addr">
+    <h1 class="footer__logo">Kits Spark</h1>
+        
+    <h2>Contact</h2>
+    
+    <address>
+      Vinjanampadu, Vatticherukuru Mandal, Guntur, Andhra Pradesh 522017<br>
+          
+      <a class="footer__btn" href="mailto:kitsspark@gmail.com">kitsspark@gmail.com</a>
+    </address>
+  </div>
+  
+  
+  <ul class="footer__nav">
+    <li class="nav__item">
+      <h2 class="nav__title">Media / Others</h2>
+
+      <ul class="nav__ul">
+        <li>
+          <a href="https://kitsspark.github.io/gallery.html" target="_blank">Gallery</a>
+        </li>
+        <li>
+          <a href="./api.html" target="_blank">API</a>
+        </li>
+        <li>
+          <a href="./architecture.html" target="_blank">Architecture</a>
+        </li>
+      </ul>
+    </li>
+    
+    <li class="nav__item nav__item--extra">
+      <h2 class="nav__title">Pages</h2>
+      
+      <ul class="nav__ul nav__ul--extra">
+          
+      <li><a  href="https://kitsspark.github.io/index.html">Spark Home</a></li>
+      <li><a href="https://kitsspark.github.io/about.html" >About</a></li>
+      <li><a href="https://kitsspark.github.io/gallery.html" >Gallery</a></li>
+      <li><a href="https://kitsspark.github.io/members.html" >Members</a></li>
+      <li><a href="https://kitsspark.github.io/contact.html" >Contact</a></li>
+      <li><a href="https://generalmadnit.github.io/" >Notes Home</a></li>
+      <li><a href="https://kitsspark.github.io/events.html" >Events</a></li>
+      <li><a href="https://kitsspark.github.io/notice_board.html" >Notice Board</a></li>
+  </ul>
+  
+  <div class="legal">
+    <p>&copy; 2022 SPARK. All rights reserved.</p>
+    
+    <div class="legal__links">
+      <span>Made with <span class="heart">♥</span>  from DataScience</span>
+    </div>
+  </div>
+</footer>
+
 </html>
 
 
