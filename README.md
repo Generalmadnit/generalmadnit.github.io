@@ -1,4 +1,4 @@
-# GeneralMadNit.github.io
+# cv
 
 
-This is a repository created for KITS STUDENTS by KITS STUDENTS.
+This is a for My Resume
