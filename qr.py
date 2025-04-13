@@ -20,7 +20,7 @@ QRcode = qrcode.QRCode(
 )
 
 # taking url or text
-url = 'https://github.com/Generalmadnit/cv/blob/main/Certificates/resume_updt_8.4.pdf'
+url = 'https://github.com/Generalmadnit/cv/'
 
 # adding URL or text to QRcode
 QRcode.add_data(url)
